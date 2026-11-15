@@ -1,0 +1,122 @@
+@font-face{font-family:'Fraunces';src:url(assets/fonts/fraunces.woff2) format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(assets/fonts/fraunces-italic.woff2) format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:'DM Sans';src:url(assets/fonts/dmsans.woff2) format('woff2');font-weight:100 1000;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Sans';src:url(assets/fonts/dmsans-italic.woff2) format('woff2');font-weight:100 1000;font-style:italic;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url(assets/fonts/bricolage.woff2) format('woff2');font-weight:200 800;font-display:swap}
+@font-face{font-family:'Poppins';src:url(assets/fonts/poppins-400.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Poppins';src:url(assets/fonts/poppins-600.woff2) format('woff2');font-weight:500 600;font-display:swap}
+@font-face{font-family:'Poppins';src:url(assets/fonts/poppins-700.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Poppins';src:url(assets/fonts/poppins-800.woff2) format('woff2');font-weight:800 900;font-display:swap}
+@page { size: 210mm 297mm; margin: 0; }
+:root{--teal:#0e7c6b;--deep:#073b36;--mint:#dff5ee;--mint2:#bfeadd;--coral:#ff6f59;--sun:#ffc23d;--sky:#3aa7d8;--ink:#1d2b2a;--muted:#5d6f6c;--soft:#f3faf7;}
+*{box-sizing:border-box;margin:0;padding:0}
+
+.mag{font-family:'DM Sans',sans-serif;color:var(--ink);font-size:10.4pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;background:#fff;page-break-after:always;break-after:page;margin:0 auto}
+.pad{position:absolute;inset:17mm 15mm 18mm 15mm;display:flex;flex-direction:column}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;letter-spacing:-.01em;line-height:1.05;color:var(--deep)}
+.kicker{display:inline-flex;align-items:center;gap:7px;font-family:'Poppins';font-weight:600;font-size:7.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:3mm}
+.kicker:before{content:"";width:22px;height:3px;border-radius:3px;background:var(--coral)}
+.title{font-size:31pt;margin-bottom:4mm}
+.title em{font-style:italic;color:var(--teal);font-weight:600}
+.lead{font-size:11.2pt;color:var(--muted);line-height:1.5}
+p{margin-bottom:2.6mm;text-align:left}
+.cols2{column-count:2;column-gap:7mm}
+.cols2 p{break-inside:auto}
+.foot{position:absolute;left:15mm;right:15mm;bottom:8mm;display:flex;justify-content:space-between;align-items:center;font-family:'Poppins';font-size:6.8pt;letter-spacing:.12em;text-transform:uppercase;color:#8aa29d}
+.foot b{display:inline-grid;place-items:center;width:8mm;height:8mm;border-radius:50%;background:var(--deep);color:#fff;font-size:7.5pt;letter-spacing:0}
+.page.even .foot{flex-direction:row-reverse}
+.blob{position:absolute;border-radius:50%;filter:blur(0px);opacity:.9}
+.fig{position:relative;border-radius:4mm;overflow:hidden;background:#eef4f2;box-shadow:0 2mm 6mm rgba(7,59,54,.12)}
+.fig img{width:100%;height:100%;object-fit:cover;display:block}
+.fig.doc{background:#f6f8f8;padding:2mm}
+.fig.doc img{object-fit:contain}
+.cap{font-size:7.8pt;color:var(--muted);line-height:1.35;margin-top:1.6mm}
+.cap b{color:var(--teal)}
+.grid{display:grid;gap:3.5mm}
+.card{background:var(--soft);border-radius:4mm;padding:4.5mm 5mm}
+.pill{display:inline-block;font-family:'Poppins';font-weight:600;font-size:7.5pt;padding:1.2mm 3.2mm;border-radius:20mm;background:var(--mint);color:var(--teal)}
+ul.clean{list-style:none}
+ul.clean li{position:relative;padding-left:6mm;margin-bottom:2mm}
+ul.clean li:before{content:"";position:absolute;left:0;top:1.6mm;width:2.6mm;height:2.6mm;border-radius:50%;background:var(--teal);box-shadow:0 0 0 1.2mm var(--mint)}
+ol.num{list-style:none;counter-reset:n}
+ol.num li{counter-increment:n;position:relative;padding-left:9mm;margin-bottom:2.2mm}
+ol.num li:before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:.1mm;font-family:'Poppins';font-weight:700;font-size:8pt;color:#fff;background:var(--teal);border-radius:2mm;padding:.4mm 1.4mm}
+.quote{font-family:'Fraunces';font-style:italic;font-size:15pt;line-height:1.3;color:var(--deep);border-left:4px solid var(--coral);padding:1mm 0 1mm 5mm}
+.stat{font-family:'Poppins';font-weight:800;font-size:34pt;line-height:1;color:var(--coral)}
+.statlab{font-family:'Poppins';font-size:7.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:8.4pt;border-radius:3mm;overflow:hidden}
+table.t th{background:var(--deep);color:#fff;font-family:'Poppins';font-weight:600;font-size:7.6pt;padding:2mm 2mm;text-align:center}
+table.t td{padding:1.7mm 2mm;border-bottom:1px solid #dfece8;text-align:center;background:#fff}
+table.t td.l{text-align:left}
+table.t tr:nth-child(even) td{background:#f5fbf9}
+table.t tr.hi td{background:#fff1ec;font-weight:700;color:#b33a26}
+/* kegiatan */
+.khead{display:flex;align-items:flex-end;gap:5mm;margin-bottom:4mm}
+.knum{font-family:'Fraunces';font-weight:800;font-size:60pt;line-height:.8;color:var(--mint2)}
+.knum small{display:block;font-family:'Poppins';font-size:7.5pt;font-weight:600;letter-spacing:.2em;color:var(--teal);margin-bottom:2mm}
+.ktitle{font-size:19pt;line-height:1.1}
+.date{display:inline-flex;gap:2mm;align-items:center;font-family:'Poppins';font-weight:600;font-size:8pt;color:#fff;background:var(--coral);padding:1.2mm 3.5mm;border-radius:10mm;margin-top:2mm}
+.outbox{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-bottom:4mm}
+.outbox .card{padding:3.5mm 4mm;font-size:8.6pt}
+.outbox h4{font-family:'Poppins';font-size:7.4pt;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:1.2mm}
+.outbox ul{padding-left:4mm}
+.step{display:flex;gap:3mm;align-items:flex-start;margin-bottom:2mm}
+.step .n{flex:none;width:7mm;height:7mm;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;font-family:'Poppins';font-weight:700;font-size:8pt}
+.step .tx{font-weight:600;font-size:9.2pt;line-height:1.35;padding-top:.6mm;color:var(--deep)}
+.step .tx span{display:block;font-weight:400;color:var(--muted);font-size:8.2pt}
+.akhlak{margin-top:auto;background:var(--deep);border-radius:4mm;padding:3.5mm 4mm;color:#eafff8}
+.akhlak h4{font-family:'Poppins';font-size:7.4pt;letter-spacing:.16em;text-transform:uppercase;color:var(--sun);margin-bottom:2mm}
+.akhlak .g{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm 3mm}
+.akhlak .i{font-size:6.9pt;line-height:1.3;color:#cfe9e2}
+.akhlak .i b{display:block;font-family:'Poppins';font-size:7.3pt;color:#fff;margin-bottom:.4mm}
+.akhlak .i b i{font-style:normal;display:inline-grid;place-items:center;width:4.2mm;height:4.2mm;border-radius:1mm;background:var(--sun);color:var(--deep);margin-right:1.2mm;font-size:6.8pt}
+.bar{display:flex;align-items:center;gap:2mm;margin-bottom:1.6mm;font-size:7.8pt}
+.bar .lab{width:43mm;text-align:right;color:var(--ink);line-height:1.15}
+.bar .trk{flex:1;height:5mm;background:#eef5f3;border-radius:3mm;overflow:hidden}
+.bar .fil{height:100%;border-radius:3mm;background:linear-gradient(90deg,var(--teal),#33b39b)}
+.bar .val{width:12mm;font-family:'Poppins';font-weight:700;color:var(--deep)}
+.bar.top .fil{background:linear-gradient(90deg,var(--coral),#ff9c6e)}
+.nft .foot span{display:none}
+.kp p,.kp li{text-align:left}
+.mag .page,.page{font-family:'DM Sans',sans-serif;color:var(--ink);font-size:10.4pt;line-height:1.5;text-align:left}
+.page{margin:0}
+.ic{width:1.15em;height:1.15em;display:inline-block;vertical-align:-.18em}
+.tips .ic{width:7mm;height:7mm}
+/* logos */
+.logos{display:flex;align-items:center;gap:2.6mm}
+.logos img{display:block;height:100%;width:auto;object-fit:contain}
+.coverhead{position:absolute;left:0;right:0;top:0;height:22mm;background:rgba(255,255,255,.96);display:flex;align-items:center;justify-content:space-between;padding:0 15mm;box-shadow:0 2mm 8mm rgba(0,0,0,.12)}
+.coverhead [data-slot=logos]{height:14mm}
+.coverhead .ed{font-family:Poppins;font-weight:700;color:#073b36;background:#ffc23d;border-radius:10mm;padding:2mm 4.5mm;font-size:7.5pt;letter-spacing:.14em}
+.backlogos{height:14mm;margin-bottom:4mm;display:inline-flex;background:rgba(255,255,255,.95);border-radius:4mm;padding:2.5mm 4mm}
+.runhead{position:absolute;top:5.5mm;right:12mm;height:9.5mm;z-index:3;display:flex;align-items:center;padding:1.2mm 3mm;border-radius:10mm}
+.page.even .runhead{right:auto;left:12mm}
+.runhead.chip{background:rgba(255,255,255,.95);box-shadow:0 1mm 4mm rgba(0,0,0,.15)}
+.runhead .logos{height:100%;gap:2mm}
+/* page number footer */
+.foot.dk{color:#9fd9ca}
+/* BerAKHLAK block */
+.akh{border-radius:4mm;padding:2.6mm;background:linear-gradient(135deg,#fff3f1,#eefaf6);border:1px solid #f0d9d3}
+.akh .ag{display:grid;grid-template-columns:repeat(4,1fr);gap:1.8mm}
+.akh .ag.c3{grid-template-columns:repeat(3,1fr)}
+.akh .ah{border-radius:2.6mm;padding:2.2mm 2.4mm;background:linear-gradient(150deg,#7a1f2b,#b3263a);color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:1.2mm}
+.akh .ah .lg{background:#fff;border-radius:1.6mm;padding:1mm 1.6mm;align-self:flex-start}
+.akh .ah .lg img{height:6mm;width:auto;display:block}
+.akh .ah b{font-family:Poppins;font-weight:700;font-size:7.6pt;line-height:1.15;color:#fff}
+.akh .ah span{font-family:Poppins;font-weight:600;font-size:6.4pt;letter-spacing:.08em;text-transform:uppercase;color:#ffd9d0}
+.akh .ac{background:#fff;border-radius:2.6mm;padding:1.8mm 2mm;border-top:2.6px solid var(--c);box-shadow:0 .6mm 2mm rgba(7,59,54,.06)}
+.akh .ac .hd{display:flex;align-items:center;gap:1.5mm;margin-bottom:.7mm}
+.akh .ai{flex:none;width:5.6mm;height:5.6mm;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center}
+.akh .ai svg{width:3.4mm;height:3.4mm}
+.akh .ac b{font-family:Poppins;font-weight:700;font-size:6.9pt;line-height:1.1;color:var(--deep)}
+.akh .ac p{font-size:6.5pt;line-height:1.28;color:#4b5d5a;margin:0;text-align:left}
+/* image slots */
+.figwrap.empty{display:none}
+.fig.slot img[src=""]{display:none}
+.page.blank{background:#fff}
+[data-slot=akhlak]{margin-top:auto}
+[data-slot=akhlak]:empty{display:none}
+[data-slot=logos] .logos,.backlogos .logos{height:100%}
+.coverhead [data-slot=logos]{display:flex}
+.page img[src=""]{visibility:hidden}

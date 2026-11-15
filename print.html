@@ -1,0 +1,18 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Majalah GERCEP MENSIKU · PDF</title><link rel="stylesheet" href="mag.css">
+<style>html,body{background:#5b6b68;margin:0}
+#bar{position:sticky;top:0;z-index:9;background:#073b36;color:#fff;font:600 14px system-ui;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#bar button{background:#ffc23d;color:#073b36;border:0;border-radius:10px;padding:9px 16px;font:700 14px system-ui;cursor:pointer}
+#bar small{font-weight:400;color:#bfeadd}
+.page{margin:12px auto;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+@media print{#bar{display:none}html,body{background:#fff}.page{margin:0;box-shadow:none}}
+</style></head><body>
+<div id="bar"><span id="st">Menyiapkan halaman…</span><button id="pr" disabled>Simpan sebagai PDF / Cetak</button><small>Pada jendela cetak pilih “Simpan sebagai PDF”, ukuran kertas A4, margin “Tidak ada”, dan aktifkan “Grafik latar belakang”.</small></div>
+<div id="pages" class="mag"></div>
+<script src="fb-core.js"></script><script>
+(async()=>{const r=await FB.load();const ps=FB.publicPages(r.pages);const box=document.getElementById('pages');
+ps.forEach((p,i)=>box.appendChild(FB.renderPage(p,i+1,r.settings)));
+await document.fonts.ready;await Promise.all([...document.images].map(i=>i.complete?0:new Promise(z=>{i.onload=i.onerror=z})));
+document.body.dataset.ready=1;document.getElementById('st').textContent=ps.length+' halaman siap.';const b=document.getElementById('pr');b.disabled=false;b.onclick=()=>print();
+if(!new URLSearchParams(location.search).has('noprint')) setTimeout(()=>print(),400);})();
+</script></body></html>

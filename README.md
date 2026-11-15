@@ -1,6 +1,12 @@
-# Majalah GERCEP MENSIKU — Flipbook Digital
+# Majalah Digital GERCEP MENSIKU (Flipbook)
 
-Majalah digital Laporan Aktualisasi Latsar CPNS 2026 (dr. Wenni Juniarni Tripani, UPTD Puskesmas Mensiku):
-"Upaya Pengendalian ISPA di Lingkungan Puskesmas melalui Penyuluhan Etika Batuk dan Bersin serta Pemanfaatan GERCEP MENSIKU".
+Flipbook majalah Laporan Aktualisasi Latsar CPNS 2026 — UPTD Puskesmas Mensiku, Kabupaten Sintang.
 
-Flipbook statis (HTML/CSS/JS) dengan library StPageFlip (MIT, disertakan di `vendor/`).
+- Majalah: https://bersamakita2020-max.github.io/majalah-flipbook/
+- Admin (edit isi, ganti gambar/notulen, logo header, nilai BerAKHLAK): https://bersamakita2020-max.github.io/majalah-flipbook/admin/
+- PDF terbaru: tombol **PDF** (membuka `print.html` → Simpan sebagai PDF).
+
+Isi halaman disimpan di Supabase (tabel `flipbook_pages`, `flipbook_settings`; gambar unggahan di bucket `flipbook`).
+`content.json` adalah cadangan bila database tidak dapat diakses.
+
+Pustaka: [StPageFlip](https://github.com/Nodlik/StPageFlip) (MIT), supabase-js (MIT).
