@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Majalah GERCEP MENSIKU · Flipbook Digital</title>
+<meta name="description" content="Majalah digital Laporan Aktualisasi Latsar CPNS 2026: Upaya Pengendalian ISPA melalui Penyuluhan Etika Batuk dan Bersin serta GERCEP MENSIKU - UPTD Puskesmas Mensiku.">
+<meta property="og:title" content="Majalah GERCEP MENSIKU · Flipbook Digital">
+<meta property="og:description" content="Gerakan Edukasi Cepat Masyarakat Mensiku · Laporan Aktualisasi Latsar CPNS 2026 · dr. Wenni Juniarni Tripani">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#073b36">
+<link rel="icon" href="assets/logo2.png">
+<link rel="preload" as="image" href="pages/p01.jpg">
+<link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+<div id="loader"><div class="lbox"><img src="thumbs/p01.jpg" alt=""><div class="lt">Memuat majalah…</div><div class="lbar"><i id="lprog"></i></div></div></div>
+
+<header id="top">
+  <div class="brand"><img src="assets/logo1.png" alt=""><img src="assets/logo2.png" alt="">
+    <div><b>GERCEP MENSIKU</b><span>Majalah Laporan Aktualisasi · Latsar CPNS 2026</span></div></div>
+  <div class="tright"><button class="ib" id="bShare" title="Bagikan tautan"><svg viewBox="0 0 24 24"><path d="M18 8a3 3 0 1 0-2.8-4M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+  <a class="ib" id="bDl" href="Majalah_GERCEP_MENSIKU.pdf" download title="Unduh PDF"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg><em>PDF</em></a></div>
+</header>
+
+<main id="stage">
+  <button class="side prev" id="sPrev" title="Halaman sebelumnya"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div id="bookWrap"><div id="book"></div></div>
+  <button class="side next" id="sNext" title="Halaman berikutnya"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div id="hint">👆 Klik atau geser sudut halaman untuk membalik</div>
+</main>
+
+<nav id="bar">
+  <button class="ib" id="bFirst" title="Halaman pertama"><svg viewBox="0 0 24 24"><path d="M6 5v14M18 5l-7 7 7 7"/></svg></button>
+  <button class="ib" id="bPrev" title="Sebelumnya"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="count"><input id="pInput" inputmode="numeric" aria-label="Nomor halaman"><span id="pTotal">/ 32</span></div>
+  <button class="ib" id="bNext" title="Berikutnya"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <button class="ib" id="bLast" title="Halaman terakhir"><svg viewBox="0 0 24 24"><path d="M18 5v14M6 5l7 7-7 7"/></svg></button>
+  <i class="sep"></i>
+  <button class="ib" id="bThumbs" title="Semua halaman"><svg viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></button>
+  <button class="ib" id="bZoom" title="Perbesar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M11 8v6M8 11h6"/></svg></button>
+  <button class="ib" id="bSound" title="Suara balik halaman"><svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="w" d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg></button>
+  <button class="ib" id="bFull" title="Layar penuh"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+</nav>
+
+<section id="thumbs" aria-hidden="true"><div class="thead"><b>Semua Halaman</b><button class="ib" id="tClose" title="Tutup"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div id="tgrid"></div></section>
+
+<section id="zoom" aria-hidden="true">
+  <div id="zscroll"><div id="zinner"></div></div>
+  <div class="ztools"><button class="ib" id="zOut" title="Perkecil"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M8 11h6"/></svg></button><span id="zLvl">100%</span><button class="ib" id="zIn" title="Perbesar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M11 8v6M8 11h6"/></svg></button><button class="ib" id="zClose" title="Tutup zoom"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+</section>
+<div id="toast"></div>
+
+<script src="vendor/page-flip.browser.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>
