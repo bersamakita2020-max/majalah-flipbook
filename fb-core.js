@@ -18,6 +18,7 @@ const AKH={
 const DEFAULT_LOGOS=[
  {id:'kalbar',alt:'Provinsi Kalimantan Barat',src:'assets/logos/kalbar.svg'},
  {id:'sintang',alt:'Kabupaten Sintang',src:'assets/logos/sintang.png'},
+ {id:'lanri',alt:'Lembaga Administrasi Negara RI',src:'assets/logos/lan-ri.png'},
  {id:'berakhlak',alt:'BerAKHLAK',src:'assets/logos/berakhlak.svg'},
  {id:'bangga',alt:'Bangga Melayani Bangsa',src:'assets/logos/bangga-melayani-bangsa.svg'}
 ];
@@ -32,6 +33,7 @@ async function rest(path,token){
 async function load(opts){
   opts=opts||{};
   try{
+    if(/[?&]local\b/.test(location.search)) throw new Error('mode lokal');
     const [pages,sets]=await Promise.all([
       rest('flipbook_pages?book=eq.'+BOOK+'&select=*&order=position.asc',opts.token),
       rest('flipbook_settings?select=key,value',opts.token)]);
