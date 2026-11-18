@@ -25,6 +25,7 @@ svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-l
 .pgin{position:absolute;left:0;top:0;width:793.7px;height:1122.5px;transform-origin:0 0;pointer-events:none}
 .pgin .page{margin:0}
 .pg .sk{z-index:2;transition:opacity .4s}.pg.ok .sk{opacity:0;pointer-events:none}
+.pg .pgin a[href],.zp .pgin a[href]{pointer-events:auto;position:relative;z-index:3;cursor:pointer}
 .pg .sk{position:absolute;inset:0;background:linear-gradient(110deg,#eef5f3 30%,#f8fbfa 50%,#eef5f3 70%);background-size:200% 100%;animation:sk 1.2s linear infinite}
 @keyframes sk{to{background-position:-200% 0}}
 .side{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer;display:grid;place-items:center;z-index:5;backdrop-filter:blur(6px);transition:background .2s,opacity .2s}
